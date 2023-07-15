@@ -6,6 +6,7 @@ const Post = (props) => {
     return (
         <div className='post'>
             <img src={coverImg} alt="" />
+            <div className="upper-section">
             <div className="user">
                 <img src={img} alt="" />
                 <div className="user-info">
@@ -13,6 +14,9 @@ const Post = (props) => {
                     <p>{publishDate}</p>
                 </div>
             </div>
+            <h4>{readTime} min read</h4>
+            </div>
+            
             <div className="post-info">
                 <h2>{title}</h2>
                 <p>#beginners</p>
