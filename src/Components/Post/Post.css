@@ -1,24 +1,38 @@
-img{
+.cover{
     width: 845px;
     height: 450px;
+    margin-top: 20px;
+    
 }
 .user{
     display: flex;
+    margin-top: 32px;
 }
 .user-info h3 ,p {
-    margin: 0 15px;
+    margin:0 15px;
     margin-top: 1px;
 }
-/* .user-info p{
-    margin-top: 0;
-} */
+
 .user img{
     border-radius: 50%;
     width: 60px;
     height: 60px;
     
 }
+.post-info {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.post-info p{
+margin: 0
+}
+.post-info a {
+    text-decoration: underline;
+    color: #6047EC;
+    }
+
 .upper-section{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
