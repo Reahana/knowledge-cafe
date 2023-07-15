@@ -21,8 +21,11 @@ const Blogs = () => {
                 }
                 
             </div>
-            <div>
+            <div className='sidebar-container'>
+                <div className="sidebar">
                 <h1>Bookmark</h1>
+                </div>
+                
             </div>
         </div>
     );
