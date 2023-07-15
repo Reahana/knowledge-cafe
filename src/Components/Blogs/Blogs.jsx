@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import './Blogs.css'
 import Post from '../Post/Post';
@@ -23,7 +24,13 @@ const Blogs = () => {
             </div>
             <div className='sidebar-container'>
                 <div className="sidebar">
-                <h1>Bookmark</h1>
+                    <div className="spendTime">
+                        <h3>Spent time on read : </h3>
+                    </div>
+                    <div className="bookmark">
+                    <h3>Bookmarked Blogs : </h3>
+                    </div>
+                    
                 </div>
                 
             </div>
