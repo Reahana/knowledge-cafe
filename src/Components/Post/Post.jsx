@@ -29,7 +29,7 @@ console.log('ok');
                 <p>#beginners #programming</p>
                 <button>Mark as read</button>
             </div>
-            
+            <hr />
         </div>
     );
 };

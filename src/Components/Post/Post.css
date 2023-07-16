@@ -1,7 +1,7 @@
 .cover{
     width: 845px;
     height: 450px;
-    margin-top: 20px;
+    margin-top: 30px;
     
 }
 .upper-section{
@@ -34,6 +34,7 @@ margin: 0
 .post-info button {
     text-decoration: underline;
     color: #6047EC;
+    margin-bottom: 10px;
     }
 
 
