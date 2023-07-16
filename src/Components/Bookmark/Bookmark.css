@@ -1,0 +1,18 @@
+
+.spendTime h3{
+    color:#6047EC;
+    text-align: center;
+    background-color:#EFEDFD ;
+    padding: 20px 50px;
+    border: 2px solid #6047EC;
+    border-radius: 10px;
+}
+.bookmark-container{
+    background-color: #F3F3F3;
+    min-height: 1000px;
+    border-radius: 10px ;
+}
+.bookmark-container h3{
+padding: 30px 0px 16px 30px;
+
+}
