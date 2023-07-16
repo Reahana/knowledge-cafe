@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './Blogs.css'
 import Post from '../Post/Post';
+import Bookmark from '../Bookmark/Bookmark';
 
 const Blogs = () => {
     const [posts,setPosts] = useState([]);
@@ -23,15 +24,7 @@ const Blogs = () => {
                 
             </div>
             <div className='sidebar-container'>
-                <div className="sidebar">
-                    <div className="spendTime">
-                        <h3>Spent time on read : </h3>
-                    </div>
-                    <div className="bookmark">
-                    <h3>Bookmarked Blogs : </h3>
-                    </div>
-                    
-                </div>
+                <Bookmark></Bookmark>
                 
             </div>
         </div>
