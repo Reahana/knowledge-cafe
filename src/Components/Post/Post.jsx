@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Post = (props) => {
+    const test= ()=>{
+console.log('ok');
+    }
     const {title,author,publishDate,readTime,img,coverImg} = props.post;
     return (
         <div className='post'>
@@ -18,13 +21,13 @@ const Post = (props) => {
                         <p>{publishDate}</p>
                     </div>
                 </div>
-                <p>{readTime} min read <FontAwesomeIcon icon={faBookmark}></FontAwesomeIcon></p>
+                <p>{readTime} min read <button className='bookmark' onClick={test}><FontAwesomeIcon icon={faBookmark}></FontAwesomeIcon></button></p>
             </div>
             
             <div className="post-info">
                 <h2>{title}</h2>
                 <p>#beginners #programming</p>
-                <a href="">Mark as read</a>
+                <button>Mark as read</button>
             </div>
             
         </div>

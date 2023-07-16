@@ -4,6 +4,11 @@
     margin-top: 20px;
     
 }
+.upper-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .user{
     display: flex;
     margin-top: 32px;
@@ -26,13 +31,17 @@
 .post-info p{
 margin: 0
 }
-.post-info a {
+.post-info button {
     text-decoration: underline;
     color: #6047EC;
     }
 
-.upper-section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+button {
+    background-color: #ffffff !important;
+    padding: 0 !important;
+    border: 0  none !important;
+}
+ button:hover{
+    color: rgb(210, 29, 201);
 }
