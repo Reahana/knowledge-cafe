@@ -9,6 +9,10 @@
     justify-content: space-between;
     align-items: center;
 }
+.upper-section button {
+    margin-right: 5px;
+    color: #6c6969;
+}
 .user{
     display: flex;
     margin-top: 32px;

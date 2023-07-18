@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Post = (props) => {
-    const test= ()=>{
-console.log('ok');
-    }
-    const {title,author,publishDate,readTime,img,coverImg} = props.post;
+    
+    const { title,author,publishDate,readTime,img,coverImg} = props.post;
+   const addToSpendTime =props.addToSpendTime;
+  
     return (
         <div className='post'>
             <img className='cover' src={coverImg} alt="" />
@@ -21,7 +21,7 @@ console.log('ok');
                         <p>{publishDate}</p>
                     </div>
                 </div>
-                <p>{readTime} min read <button className='bookmark' onClick={test}><FontAwesomeIcon icon={faBookmark}></FontAwesomeIcon></button></p>
+                <button onClick={() => addToSpendTime(props.post)} >{readTime} min read <FontAwesomeIcon icon={faBookmark}></FontAwesomeIcon></button>
             </div>
             
             <div className="post-info">
