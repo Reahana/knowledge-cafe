@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './Blogs.css'
 import Post from '../Post/Post';
 import Bookmark from '../Bookmark/Bookmark';
+import { addToDb, getBookCart  } from '../../utilities/fakedb';
 
 const Blogs = () => {
     const [posts,setPosts] = useState([]);
@@ -15,6 +16,29 @@ const Blogs = () => {
         .then(data => setPosts(data))
     },[])
 
+    // useEffect(()=>{
+    //     const storedCart =getBookCart();
+    //     const savedCart = [];
+    //      // step 1: get id of the addedPost
+    //     for(const id in storedCart){
+    //         // step 2: get product from products state by using id
+    //         const addedPost = posts.find(post => post.id === id)
+    
+    //         if(addedPost){
+    //             // step 3: add quantity
+    //             const quantity = storedCart[id];
+    //             addedPost.quantity = quantity;
+    //             // step 4: add the added product to the saved cart
+    //             savedCart.push(addedPost);
+    //         }
+    //           console.log('added Post', addedPost)
+    //     }
+    
+    //             // step 5: set the cart
+    //             setBookmarked(savedCart);
+
+    // },[posts])
+
     const addToSpendTime = (post) =>{
        const newSpendTime = [...spendTime,post]
        setSpendTime(newSpendTime );
@@ -22,7 +46,9 @@ const Blogs = () => {
     const addToBookmarkedBlogs = (post) =>{
         const newBookmarked = [...bookmarked,post]
         setBookmarked(newBookmarked );
+         addToDb(post.id);
      }
+   
 
     return (
         <div className='blogs-container'>
@@ -39,7 +65,7 @@ const Blogs = () => {
             </div>
             <div className='sidebar-container'>
                 <Bookmark spendTime = {spendTime} 
-                bookmarkedBlog = {bookmarked} ></Bookmark>
+                bookmarked = {bookmarked} ></Bookmark>
                
                 
             </div>
