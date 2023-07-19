@@ -21,8 +21,7 @@ const Blogs = () => {
     const addToSpendTime = (post) =>{
        const newBookmarked = [...bookmarked,post]
        setBookmarked(newBookmarked );
-       console.log(newBookmarked);
-       console.log(bookmarked.length);
+      
        
     }
 

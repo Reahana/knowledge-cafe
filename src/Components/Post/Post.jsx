@@ -21,13 +21,13 @@ const Post = (props) => {
                         <p>{publishDate}</p>
                     </div>
                 </div>
-                <button onClick={() => addToSpendTime(props.post)} >{readTime} min read <FontAwesomeIcon icon={faBookmark}></FontAwesomeIcon></button>
+               <p> {readTime} min read <button  > <FontAwesomeIcon icon={faBookmark}></FontAwesomeIcon></button> </p>
             </div>
             
             <div className="post-info">
                 <h2>{title}</h2>
                 <p>#beginners #programming</p>
-                <button>Mark as read</button>
+                <button onClick={() => addToSpendTime(props.post)}>Mark as read</button>
             </div>
             <hr />
         </div>
