@@ -9,6 +9,7 @@ const Post = (props) => {
     
     const { title,author,publishDate,readTime,img,coverImg} = props.post;
    const addToSpendTime =props.addToSpendTime;
+   const addToBookmarkedBlogs = props.addToBookmarkedBlogs;
   
     return (
         <div className='post'>
@@ -21,7 +22,7 @@ const Post = (props) => {
                         <p>{publishDate}</p>
                     </div>
                 </div>
-               <p> {readTime} min read <button  > <FontAwesomeIcon icon={faBookmark}></FontAwesomeIcon></button> </p>
+               <p> {readTime} min read <button onClick={() => addToBookmarkedBlogs(props.post)} > <FontAwesomeIcon icon={faBookmark}></FontAwesomeIcon></button> </p>
             </div>
             
             <div className="post-info">
