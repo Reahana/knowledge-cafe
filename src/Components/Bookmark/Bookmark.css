@@ -1,4 +1,7 @@
-
+.sidebar{
+    position: sticky;
+   top:0;
+}
 .spendTime h3{
     color:#6047EC;
     text-align: center;
