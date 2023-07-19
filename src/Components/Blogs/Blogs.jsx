@@ -6,11 +6,8 @@ import Bookmark from '../Bookmark/Bookmark';
 
 const Blogs = () => {
     const [posts,setPosts] = useState([]);
-    const [bookmarked,setBookmarked] = useState([]);
-
-    useEffect (()=>{
-
-    },[])
+   const [bookmarked,setBookmarked] = useState([]);
+    const [spendTime,setSpendTime] = useState([]);
 
     useEffect(()=>{
         fetch('posts.json')
@@ -19,11 +16,13 @@ const Blogs = () => {
     },[])
 
     const addToSpendTime = (post) =>{
-       const newBookmarked = [...bookmarked,post]
-       setBookmarked(newBookmarked );
-      
-       
+       const newSpendTime = [...spendTime,post]
+       setSpendTime(newSpendTime );
     }
+    const addToBookmarkedBlogs = (post) =>{
+        const newBookmarked = [...bookmarked,post]
+        setBookmarked(newBookmarked );
+     }
 
     return (
         <div className='blogs-container'>
@@ -32,13 +31,15 @@ const Blogs = () => {
                     posts.map( post => <Post 
                         key = {post.id}
                         post = {post}
-                        addToSpendTime = {addToSpendTime}> 
+                        addToSpendTime = {addToSpendTime}
+                        addToBookmarkedBlogs ={addToBookmarkedBlogs}> 
                         </Post>)
                 }
                 
             </div>
             <div className='sidebar-container'>
-                <Bookmark bookmarked = {bookmarked}  ></Bookmark>
+                <Bookmark spendTime = {spendTime} 
+                bookmarkedBlog = {bookmarked} ></Bookmark>
                
                 
             </div>
